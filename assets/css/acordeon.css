@@ -1,0 +1,47 @@
+.accordion{
+  display: flex;
+  flex-direction: column;
+  border: 1px solid white;
+  border-radius: 1rem;
+  width: 100%;
+  margin: 1rem 0;
+  transition: .25s;
+}
+.accordion.open .trigger::after{
+  transform: rotate(180deg);
+}
+.accordion .content{
+  display: none;
+}
+.accordion .trigger::after {
+  content: '';
+  display: inline-block;
+  width: 1.5rem;
+  height: 1.5rem;
+  background-repeat: no-repeat;
+  background-size: contain;
+  background-image: url('/assets/img/icons/arrow-top.svg');
+}
+.accordion .trigger{
+  font-size: 1.5rem;
+  font-weight: 700;
+  justify-content: space-between;
+  display: flex;
+  flex-direction: row;
+  padding: 1rem 2rem;
+  background-color: transparent;
+  color: white; 
+  border: none;
+}
+.accordion.open, .accordion:hover{
+  background-color: #55569E;
+  border-color: #55569E;
+}
+.accordion.open .content{
+  display: inline-block;
+}
+
+.accordion .trigger:hover{
+  cursor: pointer;
+
+}
