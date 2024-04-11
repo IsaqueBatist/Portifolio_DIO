@@ -20,6 +20,7 @@
   display: inline-block;
   height: auto;
   opacity: 1;
+  padding: 1rem;
 }
 .accordion .trigger::after {
   content: '';
