@@ -21,6 +21,7 @@
   height: auto;
   opacity: 1;
   padding: 1rem;
+  margin-left: 2rem;
 }
 .accordion .trigger::after {
   content: '';
