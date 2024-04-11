@@ -11,7 +11,15 @@
   transform: rotate(180deg);
 }
 .accordion .content{
-  display: none;
+  overflow: hidden;
+  height: 0;
+  opacity: 0;
+  transition: opacity .25s ease-in-out ;
+}
+.accordion.open .content{
+  display: inline-block;
+  height: auto;
+  opacity: 1;
 }
 .accordion .trigger::after {
   content: '';
@@ -21,6 +29,7 @@
   background-repeat: no-repeat;
   background-size: contain;
   background-image: url('/assets/img/icons/arrow-top.svg');
+  transition: .25s;
 }
 .accordion .trigger{
   font-size: 1.5rem;
@@ -37,9 +46,7 @@
   background-color: #55569E;
   border-color: #55569E;
 }
-.accordion.open .content{
-  display: inline-block;
-}
+
 
 .accordion .trigger:hover{
   cursor: pointer;
