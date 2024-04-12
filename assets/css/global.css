@@ -7,7 +7,7 @@
 
 @font-face {
   font-family: 'Naue Machine';
-  src: url('assets/fonts/NeueMachinaRegular.otf');
+  src: url('/assets/fonts/NeueMachinaRegular.otf');
 }
 
 body {
@@ -34,7 +34,7 @@ a:hover {
 .container::before,
 .container::after {
   content: '';
-  background-image: url('assets/img/backgound.svg');
+  background-image: url('/assets/img/backgound.svg');
   background-repeat: no-repeat;
   background-size: contain;
   width: 140vw;
