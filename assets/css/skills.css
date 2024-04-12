@@ -7,7 +7,7 @@
 .skills .tools ul{
   display: flex;
   flex-direction: row;
-  justify-content: center;
+  justify-content: flex-start;
   align-items: center;
   flex-wrap: wrap;
   margin: 0;
@@ -17,6 +17,7 @@
 .skills .tools ul img{
   max-width: 50px;
   margin: 0 .5rem;
+  max-height: 50px;
 }
 
 .skills .personal ul{
