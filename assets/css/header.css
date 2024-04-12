@@ -1,29 +1,32 @@
 @charset "UTF-8";
 
-.header{
+.header {
   display: flex;
   flex-direction: column;
   align-items: center;
   position: relative;
 }
 
-.header .photo{
+.header .photo {
   width: 200px;
   height: 200px;
   border-radius: 50%;
 }
-.header .title{
+
+.header .title {
   text-align: center;
   font-family: "Naue Machine", sans-serif;
 }
-.information p{
+
+.information p {
   display: flex;
   flex-direction: row;
   align-items: center;
   margin: .5rem;
   font-size: 1.125rem;
 }
-.information p::before{
+
+.information p::before {
   content: '';
   display: inline-block;
   width: 1rem;
@@ -32,31 +35,36 @@
   background-size: contain;
   margin-right: .5rem;
 }
+
 .information {
   display: flex;
   flex-direction: column;
   align-items: flex-start;
   width: 100%;
 }
-.information .job::before{
-  background-image: url('/assets/img/icons/job.svg');
-}
-.information .location::before{
-  background-image: url('/assets/img/icons/location.svg');
-}
-.information .email::before{
-  background-image: url('/assets/img/icons/email.svg');
-}
-.information .phone::before{
-  background-image: url('/assets/img/icons/phone.svg');
+
+.information .job::before {
+  background-image: url('assets/img/icons/job.svg');
 }
 
-.header::after{
+.information .location::before {
+  background-image: url('assets/img/icons/location.svg');
+}
+
+.information .email::before {
+  background-image: url('assets/img/icons/email.svg');
+}
+
+.information .phone::before {
+  background-image: url('assets/img/icons/phone.svg');
+}
+
+.header::after {
   content: '';
   display: inline-block;
   width: 2rem;
   height: 2rem;
-  background-image: url('/assets/img/icons/pontos.svg');
+  background-image: url('assets/img/icons/pontos.svg');
   background-repeat: no-repeat;
   background-size: contain;
   position: absolute;
@@ -65,23 +73,26 @@
 }
 
 @media screen and (min-width:600px) {
-  .header{
+  .header {
     display: grid;
-    grid-template-areas: 
-    "photo title"
-    "photo information"
+    grid-template-areas:
+      "photo title"
+      "photo information"
     ;
   }
-  .header .photo{
+
+  .header .photo {
     grid-area: photo;
     margin: 0 auto;
   }
-  .header .title{
+
+  .header .title {
     grid-area: title;
     text-align: start;
     max-width: 200px;
   }
-  .header .information{
+
+  .header .information {
     grid-area: information;
   }
 

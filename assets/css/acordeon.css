@@ -1,6 +1,6 @@
 @charset "UTF-8";
 
-.accordion{
+.accordion {
   display: flex;
   flex-direction: column;
   border: 1px solid white;
@@ -9,22 +9,26 @@
   margin: 1rem 0;
   transition: .25s;
 }
-.accordion.open .trigger::after{
+
+.accordion.open .trigger::after {
   transform: rotate(180deg);
 }
-.accordion .content{
+
+.accordion .content {
   overflow: hidden;
   height: 0;
   opacity: 0;
-  transition: opacity .25s ease-in-out ;
+  transition: opacity .25s ease-in-out;
 }
-.accordion.open .content{
+
+.accordion.open .content {
   display: inline-block;
   height: auto;
   opacity: 1;
   padding: 1rem;
   margin-left: 2rem;
 }
+
 .accordion .trigger::after {
   content: '';
   display: inline-block;
@@ -32,31 +36,35 @@
   height: 1.5rem;
   background-repeat: no-repeat;
   background-size: contain;
-  background-image: url('/assets/img/icons/arrow-top.svg');
+  background-image: url('assets/img/icons/arrow-top.svg');
   transition: .25s;
 }
-.accordion .trigger{
+
+.accordion .trigger {
   justify-content: space-between;
   display: flex;
   text-align: start;
   flex-direction: row;
   padding: 1rem 2rem;
   background-color: transparent;
-  color: white; 
+  color: white;
   border: none;
 }
-.accordion .trigger h2{
+
+.accordion .trigger h2 {
   margin: 0;
   font-size: 1.5rem;
   font-weight: 700;
 }
-.accordion.open, .accordion:hover{
+
+.accordion.open,
+.accordion:hover {
   background-color: #55569E;
   border-color: #55569E;
 }
 
 
-.accordion .trigger:hover{
+.accordion .trigger:hover {
   cursor: pointer;
 
 }

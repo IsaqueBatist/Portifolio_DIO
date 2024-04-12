@@ -1,6 +1,6 @@
 @charset "UTF-8";
 
-.languages{
+.languages {
 
   display: flex;
   flex-direction: row;
@@ -11,7 +11,8 @@
   padding: 0;
   list-style: none;
 }
-.languages li{
+
+.languages li {
   display: flex;
   flex-direction: row;
   align-items: center;
@@ -19,10 +20,11 @@
   font-weight: 700;
   font-size: 1rem;
 }
-.languages li::before{
+
+.languages li::before {
   content: '';
   display: inline-block;
-  background-image: url('/assets/img/icons/check.svg');
+  background-image: url('assets/img/icons/check.svg');
   background-repeat: no-repeat;
   background-size: contain;
   height: .8rem;
