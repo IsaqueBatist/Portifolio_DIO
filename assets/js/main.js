@@ -17,9 +17,14 @@ function updateProfileInformation(profileDate){
   email.innerText = profileDate.email
   email;href = `mailto:${profileDate.email}`
 }
+function upadteProfileSkills(profileDate){
+  const softSkills = document.getElementById('profile.skills.softSkills')
+  softSkills.innerHTML = profileDate.skills.softSkills.map(skill => `<li> ${skill} </li>`).join('')
+}
 
 (async () => {
   const profileDate = await fetchProfileDate()
   updateProfileInformation(profileDate)
+  upadteProfileSkills(profileDate)
   console.log(profileDate)
 })()
