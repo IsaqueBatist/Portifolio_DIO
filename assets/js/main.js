@@ -31,10 +31,22 @@ function updateProfileLanguages(profileDate){
   languages.innerHTML = profileDate.languages.map(language =>
     `<li>${language}</li>`).join('')
 }
+function updateProfilePortfolio(profileDate){
+  const portfolio = document.getElementById('profile.portfolio')
+  portfolio.innerHTML = profileDate.portfolio.map(project => {
+    return `
+    <li>
+    <h3 ${project.github ? 'class = "github"' : ''}>${project.name}</h3>
+    <a href="${project.url}" target="_blank">${project.url}</a>
+    </li>
+  `
+  }).join('')
+}
 (async () => {
   const profileDate = await fetchProfileDate()
   updateProfileInformation(profileDate)
   updateProfileSkills(profileDate)
   updateProfileHardSkills(profileDate)
   updateProfileLanguages(profileDate)
+  updateProfilePortfolio(profileDate)
 })()
