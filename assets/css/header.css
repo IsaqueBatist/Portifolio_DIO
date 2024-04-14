@@ -59,6 +59,14 @@
   background-image: url('../img/icons/phone.svg');
 }
 
+.information .git::before{
+  background-image: url('../img/github.png');
+}
+.information .linkedin::before{
+  background-image: url('../img/linkedin.png')
+}
+
+
 .header::after {
   content: '';
   display: inline-block;

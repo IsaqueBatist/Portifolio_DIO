@@ -16,6 +16,12 @@ function updateProfileInformation(profileDate){
   const email = document.getElementById('profile.email')
   email.innerText = profileDate.email
   email;href = `mailto:${profileDate.email}`
+  const github = document.getElementById('profile.git')
+  github.innerHTML = 'Github'
+  github.href= 'https://github.com/IsaqueBatist'
+  const linkedin = document.getElementById('profile.linkedin')
+  linkedin.innerText = 'Linkedin'
+  linkedin.href = 'https://www.linkedin.com/in/isaquebarbos/'
 }
 function updateProfileSkills(profileDate){
   const softSkills = document.getElementById('profile.skills.softSkills')
