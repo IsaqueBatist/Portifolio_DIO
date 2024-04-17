@@ -30,7 +30,7 @@ function updateProfileSkills(profileDate){
 function updateProfileHardSkills(profileDate){
   const hardSkills = document.getElementById('profile.skills.harSkills')
   hardSkills.innerHTML = profileDate.skills.hardSkills.map(skill =>
-    `<li ${skill.learning ? 'class="learning"' : ''}><img src="${skill.logo}" alt="${skill.name}" title="${skill.name}"></li>`).join('')
+    `<li ${skill.learning ? 'class="learning"' : ''}><img src="${skill.logo}" alt="${skill.name}" title="${skill.name, skill.learning ? ' learning' : ''}"></li>`).join('')
 }
 function updateProfileLanguages(profileDate){
   const languages = document.getElementById('profile.skills.languages')
