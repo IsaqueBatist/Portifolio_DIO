@@ -33,6 +33,10 @@
   margin-left: 2rem;
   padding: .5rem;
 }
+.learning{
+  filter: grayscale(1);
+  opacity: 50%;
+}
 
 @media screen and (min-width: 768px) {
   .skills{
